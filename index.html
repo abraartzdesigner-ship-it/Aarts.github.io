@@ -11,178 +11,100 @@
   :root{
     --bg:#000;
     --neon:#00ff66;
-    --text:#eaeaea;
   }
 
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+
   body{
     font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
     background:var(--bg);
     color:var(--neon);
-  }
-
-  /* Secciones */
-  section{
-    min-height:100vh;
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding: clamp(18px, 4vw, 56px);
   }
 
-  /* HERO */
   .hero{
     text-align:center;
   }
+
   .top{
     font-size:18px;
     letter-spacing:6px;
     margin-bottom:50px;
     opacity:.95;
   }
+
   .line{
     font-size:120px;
     font-weight:900;
     line-height:0.9;
     text-transform:uppercase;
   }
-  .motion{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:30px;
-  }
-  .motion img{
-    height:130px;
-    display:block;
-  }
 
   .actions{
-    margin-top:46px;
+    margin-top:60px;
     display:flex;
-    gap:14px;
+    gap:18px;
     justify-content:center;
     flex-wrap:wrap;
   }
+
   .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:14px 22px;
+    padding:16px 28px;
     border-radius:999px;
     text-decoration:none;
     font-weight:900;
-    letter-spacing:.04em;
+    letter-spacing:.05em;
     text-transform:uppercase;
-    border:2px solid rgba(255,255,255,.12);
-    transition:transform .15s ease, filter .15s ease, background .15s ease;
+    border:2px solid rgba(255,255,255,.15);
+    transition:.2s ease;
     background:rgba(255,255,255,.06);
     color:#fff;
   }
-  .btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+
+  .btn:hover{
+    transform:translateY(-3px);
+  }
+
   .btn.neon{
     background:var(--neon);
     color:#000;
     border-color:transparent;
   }
 
-  /* WORK / CHAT (placeholders) */
-  .panel{
-    width:min(1100px, 100%);
-    border: 1px solid rgba(0,255,102,.22);
-    border-radius:18px;
-    padding: clamp(18px, 3vw, 36px);
-    background: rgba(0,255,102,.03);
-    text-align:left;
-  }
-  .panel h2{
-    color:var(--neon);
-    font-size: clamp(28px, 3.2vw, 44px);
-    text-transform:uppercase;
-    letter-spacing:-0.02em;
-    margin-bottom:10px;
-  }
-  .panel p{
-    color:var(--text);
-    opacity:.92;
-    line-height:1.6;
-    max-width:70ch;
-  }
-
-  .grid{
-    margin-top:20px;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:14px;
-  }
-  .card{
-    height:160px;
-    border-radius:16px;
-    border:1px solid rgba(255,255,255,.10);
-    background: rgba(255,255,255,.04);
-  }
-
   @media (max-width: 980px){
     .line{font-size:70px}
-    .motion img{height:78px}
-    .grid{grid-template-columns:1fr}
   }
 
-  /* Para que el #work no quede pegado arriba si luego metes un header */
-  #work, #chat { scroll-margin-top: 20px; }
 </style>
 </head>
 
 <body>
 
-<!-- HERO / HOME -->
-<section id="home">
-  <div class="hero">
-    <div class="top">A. ARTS © 2026</div>
+<div class="hero">
+  <div class="top">A. ARTS © 2026</div>
 
-    <div class="line">I’M A</div>
+  <div class="line">I’M A</div>
+  <div class="line">MOTION</div>
+  <div class="line">DESIGNER.</div>
 
-    <div class="motion line">
-      MOTION
-    </div>
+  <div class="actions">
+    <!-- VA A OTRA PAGINA -->
+    <a class="btn neon" href="work.html">See my work</a>
 
-    <div class="line">DESIGNER.</div>
-
-    <div class="actions">
-      <a class="btn neon" href="#work">See my work</a>
-      <a class="btn" href="#chat">Let’s chat!</a>
-    </div>
+    <!-- WHATSAPP DIRECTO -->
+    <a class="btn"
+       target="_blank"
+       href="https://wa.me/5564981355976?text=Ol%C3%A1%20Abraham%2C%20estou%20interessado%20nos%20seus%20servi%C3%A7os.%20Mais%20informa%C3%A7%C3%B5es%2C%20por%20favor.">
+       Let’s chat!
+    </a>
   </div>
-</section>
-
-<!-- WORK -->
-<section id="work">
-  <div class="panel">
-    <h2>Work</h2>
-    <p>
-      Aquí van tus proyectos (reels, case studies, clips, links).  
-      Si quieres, te lo dejo con cards clicables, filtro por categoría y un modal con video.
-    </p>
-
-    <div class="grid" aria-label="Project grid placeholders">
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-    </div>
-  </div>
-</section>
-
-<!-- CHAT / CONTACT -->
-<section id="chat">
-  <div class="panel">
-    <h2>Let’s chat</h2>
-    <p>
-      Pon aquí tu WhatsApp, email o un formulario.
-      Ejemplo rápido: <b style="color:var(--neon)">contact@aartsmotion.com.br</b>
-    </p>
-  </div>
-</section>
+</div>
 
 </body>
 </html>
