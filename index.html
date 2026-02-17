@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A. Arts Motion</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
 
 <style>
 :root{
-    --bg:#050505;
+    --bg:#000000;
     --neon:#00ff66;
 }
 
@@ -27,85 +27,52 @@ body{
     align-items:center;
     justify-content:center;
     color:var(--neon);
-    overflow:hidden;
 }
 
-.container{
-    position:relative;
+.wrapper{
     text-align:center;
 }
 
-.top-tag{
+.top{
     font-size:18px;
     letter-spacing:6px;
-    margin-bottom:40px;
+    margin-bottom:50px;
 }
 
-h1{
+.line{
     font-size:120px;
     font-weight:900;
     line-height:0.9;
     text-transform:uppercase;
 }
 
-.motion-line{
+.motion{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:20px;
+    gap:30px;
 }
 
-.motion-line img{
-    height:110px;
-    transform:translateY(5px);
-}
-
-.seal{
-    position:absolute;
-    left:-220px;
-    top:50%;
-    transform:translateY(-50%);
-    width:180px;
-    opacity:0.9;
-}
-
-/* Responsive */
-@media(max-width:1000px){
-    h1{
-        font-size:70px;
-    }
-
-    .motion-line img{
-        height:65px;
-    }
-
-    .seal{
-        position:static;
-        margin:40px auto 0;
-        transform:none;
-    }
+.motion img{
+    height:130px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-    <div class="top-tag">A. ARTS © 2026</div>
+    <div class="top">A. ARTS © 2026</div>
 
-    <h1>I’M A</h1>
+    <div class="line">I’M A</div>
 
-    <div class="motion-line">
-        <h1>MOTION</h1>
-        <!-- TU GIF AQUÍ -->
-        <img src="logo.gif" alt="Logo animation">
+    <div class="motion line">
+        MOTION
+        <img src="logo.gif" alt="Logo">
     </div>
 
-    <h1>DESIGNER.</h1>
-
-    <!-- Sello circular -->
-    <img class="seal" src="seal.png" alt="Seal">
+    <div class="line">DESIGNER.</div>
 
 </div>
 
